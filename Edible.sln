@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edible.Core", "Edible.Core\Edible.Core.csproj", "{D310593D-ED60-4BD4-AA5B-7CF26EE78D9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edible.Services", "Edible.Services\Edible.Services.csproj", "{8E96ECEC-C43A-4957-9F8E-1AEAFE01E28A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edible.DataAccess", "Edible.DataAccess\Edible.DataAccess.csproj", "{EAC24C60-E2F8-4E1E-8CAD-91B4A3DD3B86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edible.DataAccess.InMemory", "Edible.DataAccess.InMemory\Edible.DataAccess.InMemory.csproj", "{84A8D5F8-A9EF-4379-8225-F302135E09A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edible.UI", "Edible.UI\Edible.UI.csproj", "{F4B842EB-FB08-46EE-9139-5ACF784AB913}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edible.UI.Tests", "Edible.UI.Tests\Edible.UI.Tests.csproj", "{6B577226-165D-4FFA-A198-BE529858FB33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D310593D-ED60-4BD4-AA5B-7CF26EE78D9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D310593D-ED60-4BD4-AA5B-7CF26EE78D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D310593D-ED60-4BD4-AA5B-7CF26EE78D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D310593D-ED60-4BD4-AA5B-7CF26EE78D9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E96ECEC-C43A-4957-9F8E-1AEAFE01E28A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E96ECEC-C43A-4957-9F8E-1AEAFE01E28A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E96ECEC-C43A-4957-9F8E-1AEAFE01E28A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E96ECEC-C43A-4957-9F8E-1AEAFE01E28A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAC24C60-E2F8-4E1E-8CAD-91B4A3DD3B86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAC24C60-E2F8-4E1E-8CAD-91B4A3DD3B86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAC24C60-E2F8-4E1E-8CAD-91B4A3DD3B86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAC24C60-E2F8-4E1E-8CAD-91B4A3DD3B86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84A8D5F8-A9EF-4379-8225-F302135E09A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84A8D5F8-A9EF-4379-8225-F302135E09A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84A8D5F8-A9EF-4379-8225-F302135E09A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84A8D5F8-A9EF-4379-8225-F302135E09A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4B842EB-FB08-46EE-9139-5ACF784AB913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4B842EB-FB08-46EE-9139-5ACF784AB913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4B842EB-FB08-46EE-9139-5ACF784AB913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4B842EB-FB08-46EE-9139-5ACF784AB913}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B577226-165D-4FFA-A198-BE529858FB33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B577226-165D-4FFA-A198-BE529858FB33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B577226-165D-4FFA-A198-BE529858FB33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B577226-165D-4FFA-A198-BE529858FB33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CCC5F98A-A07C-4397-AED3-6D111C20BED9}
+	EndGlobalSection
+EndGlobal
