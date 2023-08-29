@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edible.Core", "Edible.Core\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edible.Services", "Edible.Services\Edible.Services.csproj", "{8E96ECEC-C43A-4957-9F8E-1AEAFE01E28A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edible.DataAccess", "Edible.DataAccess\Edible.DataAccess.csproj", "{EAC24C60-E2F8-4E1E-8CAD-91B4A3DD3B86}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edible.DataAccess.SQL", "Edible.DataAccess\Edible.DataAccess.SQL.csproj", "{EAC24C60-E2F8-4E1E-8CAD-91B4A3DD3B86}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edible.DataAccess.InMemory", "Edible.DataAccess.InMemory\Edible.DataAccess.InMemory.csproj", "{84A8D5F8-A9EF-4379-8225-F302135E09A5}"
 EndProject

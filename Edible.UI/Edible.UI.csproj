@@ -169,8 +169,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -254,6 +256,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Category\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -281,6 +284,24 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Edible.Core\Edible.Core.csproj">
+      <Project>{d310593d-ed60-4bd4-aa5b-7cf26ee78d9b}</Project>
+      <Name>Edible.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Edible.DataAccess.InMemory\Edible.DataAccess.InMemory.csproj">
+      <Project>{84a8d5f8-a9ef-4379-8225-f302135e09a5}</Project>
+      <Name>Edible.DataAccess.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Edible.DataAccess\Edible.DataAccess.csproj">
+      <Project>{eac24c60-e2f8-4e1e-8cad-91b4a3dd3b86}</Project>
+      <Name>Edible.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Edible.Services\Edible.Services.csproj">
+      <Project>{8e96ecec-c43a-4957-9f8e-1aeafe01e28a}</Project>
+      <Name>Edible.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

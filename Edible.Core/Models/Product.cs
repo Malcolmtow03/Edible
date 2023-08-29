@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace Edible.Core.Models
 {
-    public class Product
+    public class Product : BaseEntity
     {
         public string Id { get; set; }
-        [StringLength(30)]
+        [StringLength(25)]
         [DisplayName("Product Name")]
 
         public string Name { get; set; }
@@ -25,9 +25,6 @@ namespace Edible.Core.Models
 
         public string Image { get; set; }
 
-        public Product()
-        {
-            this.Id = Guid.NewGuid().ToString();
-        }
+        
     }
 }
