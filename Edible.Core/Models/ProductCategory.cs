@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Edible.Core.Models
 {
-    internal class ProductCategory
+    public class ProductCategory : BaseEntity
     {
+        public string Category { get; set; }
     }
 }

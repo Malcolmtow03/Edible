@@ -172,6 +172,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductCategory.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -294,9 +295,9 @@
       <Project>{84a8d5f8-a9ef-4379-8225-f302135e09a5}</Project>
       <Name>Edible.DataAccess.InMemory</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Edible.DataAccess\Edible.DataAccess.csproj">
+    <ProjectReference Include="..\Edible.DataAccess\Edible.DataAccess.SQL.csproj">
       <Project>{eac24c60-e2f8-4e1e-8cad-91b4a3dd3b86}</Project>
-      <Name>Edible.DataAccess</Name>
+      <Name>Edible.DataAccess.SQL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Edible.Services\Edible.Services.csproj">
       <Project>{8e96ecec-c43a-4957-9f8e-1aeafe01e28a}</Project>

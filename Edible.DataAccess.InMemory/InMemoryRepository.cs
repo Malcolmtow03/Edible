@@ -1,76 +1,72 @@
-﻿using Edible.Core.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Caching;
 using System.Text;
 using System.Threading.Tasks;
+using Edible.Core.Contracts;
+using Edible.Core.Models;
 
-namespace Edible.DataAccess.InMemory
+
+namespace Edible.DataAccess.Inmemory
 {
-    public class ProductRepository
+    public class InMemoryRepository<T> : IRepository<T> where T : BaseEntity
     {
         ObjectCache cache = MemoryCache.Default;
-        List<Product> products; 
-
-        public ProductRepository()
-        {
-            products = cache["products"] as List<Product>;
-            if(products == null)
+        List<T> items;
+        string className;
+        public InMemoryRepository() 
+                {
+            className = typeof(T).Name;
+            items = cache[className] as List<T>;    
+            if(items == null)
             {
-                products = new List<Product>();
+                items = new List<T>();
             }
-        } 
+        }
+        public IQueryable<T> Collection()
+        {
+            return items.AsQueryable();
+        }
+
         public void Commit()
         {
-            cache["products"] = products;
+            cache[className] = items;
         }
 
-        public void Insert(Product p) 
+        public void Delete(string Id)
         {
-            products.Add(p);
+            T tToDelete = items.Find(i => i.Id == Id);
+            if (tToDelete == null)
+                throw new Exception(className + " Not found");
+            else
+                items.Remove(tToDelete);
         }
 
-        public void Update(Product product)  
+        public T Find(string Id)
         {
-            Product productToUpdate = products.Find(p => p.Id == product.Id);
-            if(productToUpdate != null) 
-            {
-                productToUpdate = product;
-            }
+            T t = items.Find(i => i.Id == Id);
+            if (t != null)
+                return t;
             else
-            {
-                throw new Exception("Product not Found");
-            }
+                throw new Exception(className + " Not Found");
         }
 
-        public Product Find(string Id) 
+        public void Insert(T t)
         {
-            Product product = products.Find(p => p.Id == Id);
-            if (product != null)
-            {
-                return product;
-            }
-            else
-            {
-                throw new Exception("Product not Found");
-            }
+            items.Add(t);
         }
-        public IQueryable<Product> Collection() 
+
+        public void Update(T t)
         {
-            return products.AsQueryable();
-        }
-        public void Delete(string Id) 
-        {
-            Product productToDelete = products.Find(p => p.Id == Id);
-            if (productToDelete != null)
-            {
-                products.Remove(productToDelete);
-            }
+            T tToUpdate = items.Find(i => i.Id == t.Id);
+            if (tToUpdate != null)
+                tToUpdate = t;
             else
-            {
-                throw new Exception("Product not Found");
-            }
+                throw new Exception(className + " Not Found");
         }
     }
-}
+
+        
+    }
+       
