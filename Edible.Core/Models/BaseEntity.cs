@@ -1,7 +1,19 @@
-﻿namespace Edible.Core.Models
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Edible.Core.Models
 {
     public class BaseEntity
     {
         public string Id { get; set; }
+        public DateTimeOffset Created_At { get; set; }
+        public BaseEntity()
+        {
+            this.Id = Guid.NewGuid().ToString();
+            this.Created_At = DateTime.Now;
+        }
     }
 }
