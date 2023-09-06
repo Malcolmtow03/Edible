@@ -12,6 +12,7 @@ namespace Edible.Core.Contracts
     {
         IQueryable<T> Collection();
         void Commit();
+        void Delete(string id);
         T Find(string Id);
         void Insert(T t);
         void Update(T t);
