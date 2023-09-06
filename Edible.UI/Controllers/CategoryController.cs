@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Edible.Core.Contracts;
 using Edible.Core.Models;
+using Edible.DataAccess.Inmemory;
 
 namespace Edible.UI.Controllers
 {
