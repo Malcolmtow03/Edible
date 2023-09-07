@@ -10,7 +10,7 @@ namespace Edible.Core.Models
 {
     public class Product : BaseEntity
     {
-        public string Id { get; set; }
+      
         [StringLength(25)]
         [DisplayName("Product Name")]
 
