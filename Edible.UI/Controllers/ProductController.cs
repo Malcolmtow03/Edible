@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using Edible.Core.Contracts;
 using Edible.Core.Models;
 using Edible.DataAccess.Inmemory;
+using System.IO;
 
 namespace Edible.UI.Controllers
 {
@@ -34,7 +35,7 @@ namespace Edible.UI.Controllers
             return View(viewModel);
         }
         [HttpPost]
-        public ActionResult Create(Product product)
+        public ActionResult Create(Product product, HttpPostedFileBase file)
         {
             if (!ModelState.IsValid)
             {
@@ -42,6 +43,11 @@ namespace Edible.UI.Controllers
             }
             else
             {
+                if (file != null)
+                {
+                    product.Image = product.Id + Path.GetExtension(file.FileName);
+                    file.SaveAs(Server.MapPath("//Content//ProductImages//" + product.Image));
+                }
                 context.Insert(product);
                 context.Commit();
                 return RedirectToAction("Index");
@@ -62,7 +68,7 @@ namespace Edible.UI.Controllers
 
         }
         [HttpPost]
-        public ActionResult Edit(Product product, string Id)
+        public ActionResult Edit(Product product, string Id, HttpPostedFileBase file)
         {
             Product p = context.Find(Id);
             if (p == null)
@@ -72,6 +78,11 @@ namespace Edible.UI.Controllers
                 if (!ModelState.IsValid)
                 {
                     return View(product);
+                }
+                if (file != null)
+                {
+                    p.Image = product.Id + Path.GetExtension(file.FileName);
+                    file.SaveAs(Server.MapPath("//Content//ProductImages//" + p.Image));
                 }
                 p.Category = product.Category;
                 p.Description = product.Description;

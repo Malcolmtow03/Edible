@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Edible.Core.Contracts;
+using Edible.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +10,18 @@ namespace Edible.UI.Controllers
 {
     public class HomeController : Controller
     {
+        IRepository<Product> context;
+        IRepository<ProductCategory> productCategories;
+        public HomeController(IRepository<Product> productContext,
+            IRepository<ProductCategory> categoryContext)
+        {
+            context = productContext;
+            productCategories = categoryContext;
+        }
         public ActionResult Index()
         {
-            return View();
+            List<Product> products = context.Collection().ToList();
+            return View(products);
         }
 
         public ActionResult About()

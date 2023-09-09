@@ -13,7 +13,7 @@
                     {
                         Id = c.String(nullable: false, maxLength: 128),
                         Category = c.String(),
-                        Created_At = c.DateTimeOffset(nullable: false, precision: 7),
+                        CreatedAt = c.DateTimeOffset(nullable: false, precision: 7),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -27,7 +27,7 @@
                         Price = c.Decimal(nullable: false, precision: 18, scale: 2),
                         Category = c.String(),
                         Image = c.String(),
-                        Created_At = c.DateTimeOffset(nullable: false, precision: 7),
+                        CreatedAt = c.DateTimeOffset(nullable: false, precision: 7),
                     })
                 .PrimaryKey(t => t.Id);
             

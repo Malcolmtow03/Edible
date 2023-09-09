@@ -1,4 +1,4 @@
-﻿namespace Edible.DataAccess.Migrations
+﻿namespace Edible.DataAccess.SQL.Migrations
 {
     using System;
     using System.Data.Entity;

@@ -1,7 +1,7 @@
 using Edible.Core.Contracts;
 using Edible.Core.Models;
 using Edible.DataAccess.Inmemory;
-using Edible.DataAccess.Sql;
+using Edible.DataAccess.SQL;
 using System;
 
 using Unity;

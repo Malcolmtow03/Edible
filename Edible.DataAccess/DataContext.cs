@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Security.Cryptography.X509Certificates;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,3 +20,4 @@ namespace Edible.DataAccess.SQL
         public DbSet<ProductCategory> ProductCategories { get; set; }
     }
 }
+ 

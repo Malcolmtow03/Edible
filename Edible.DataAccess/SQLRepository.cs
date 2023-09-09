@@ -1,6 +1,5 @@
 ﻿using Edible.Core.Contracts;
 using Edible.Core.Models;
-using Edible.DataAccess.SQL;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -8,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Edible.DataAccess.Sql
+namespace Edible.DataAccess.SQL
 {
     public class SQLRepository<T> : IRepository<T> where T : BaseEntity
     {
